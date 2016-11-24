@@ -4,7 +4,7 @@
 //
 //  Created by herman on 16/5/28.
 //  Copyright © 2016年 zhangshaoyu. All rights reserved.
-//
+//  github学习地址：https://github.com/potato512/SYCLLocation
 
 #import "AppDelegate.h"
 #import "ViewController.h"
