@@ -4,7 +4,7 @@
 //
 //  Created by zhangshaoyu on 16/11/24.
 //  Copyright © 2016年 zhangshaoyu. All rights reserved.
-//  github学习地址：
+//  github学习地址：https://github.com/potato512/SYCLLocation
 
 #import <CoreLocation/CoreLocation.h>
 
