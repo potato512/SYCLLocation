@@ -91,7 +91,7 @@
 
 # plist文件配置示意图
 
-![locationImage00.gif](./locationImage00.gif)
+![locationImage00.png](./locationImage00.png)
 
 
 ## 修改说明
