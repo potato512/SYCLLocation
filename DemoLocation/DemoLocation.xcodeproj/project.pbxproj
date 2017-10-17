@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A77B48251DE6BE0000434F00 /* SYCLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A77B48241DE6BE0000434F00 /* SYCLLocation.m */; };
+		A7CABE551F95D9D100A68017 /* SYCLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CABE541F95D9D100A68017 /* SYCLLocation.m */; };
 		DF8453F31CF8B18100D8C29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8453F21CF8B18100D8C29D /* main.m */; };
 		DF8453F61CF8B18100D8C29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8453F51CF8B18100D8C29D /* AppDelegate.m */; };
 		DF8453F91CF8B18100D8C29D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8453F81CF8B18100D8C29D /* ViewController.m */; };
@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A77B48231DE6BE0000434F00 /* SYCLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCLLocation.h; sourceTree = "<group>"; };
-		A77B48241DE6BE0000434F00 /* SYCLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCLLocation.m; sourceTree = "<group>"; };
+		A7CABE531F95D9D100A68017 /* SYCLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCLLocation.h; sourceTree = "<group>"; };
+		A7CABE541F95D9D100A68017 /* SYCLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCLLocation.m; sourceTree = "<group>"; };
 		DF8453EE1CF8B18100D8C29D /* DemoLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8453F21CF8B18100D8C29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF8453F41CF8B18100D8C29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7CABE521F95D9D100A68017 /* SYCLLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A7CABE531F95D9D100A68017 /* SYCLLocation.h */,
+				A7CABE541F95D9D100A68017 /* SYCLLocation.m */,
+			);
+			name = SYCLLocation;
+			path = ../../SYCLLocation;
+			sourceTree = "<group>";
+		};
 		DF8453E51CF8B18000D8C29D = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +122,7 @@
 				DF8453F51CF8B18100D8C29D /* AppDelegate.m */,
 				DF8453F71CF8B18100D8C29D /* ViewController.h */,
 				DF8453F81CF8B18100D8C29D /* ViewController.m */,
-				A77B48231DE6BE0000434F00 /* SYCLLocation.h */,
-				A77B48241DE6BE0000434F00 /* SYCLLocation.m */,
-				DF8453FA1CF8B18100D8C29D /* Main.storyboard */,
-				DF8453FD1CF8B18100D8C29D /* Assets.xcassets */,
-				DF8453FF1CF8B18100D8C29D /* LaunchScreen.storyboard */,
-				DF8454021CF8B18100D8C29D /* Info.plist */,
+				A7CABE521F95D9D100A68017 /* SYCLLocation */,
 				DF8453F11CF8B18100D8C29D /* Supporting Files */,
 			);
 			path = DemoLocation;
@@ -126,6 +131,10 @@
 		DF8453F11CF8B18100D8C29D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF8453FA1CF8B18100D8C29D /* Main.storyboard */,
+				DF8453FD1CF8B18100D8C29D /* Assets.xcassets */,
+				DF8453FF1CF8B18100D8C29D /* LaunchScreen.storyboard */,
+				DF8454021CF8B18100D8C29D /* Info.plist */,
 				DF8453F21CF8B18100D8C29D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -282,9 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8453F91CF8B18100D8C29D /* ViewController.m in Sources */,
+				A7CABE551F95D9D100A68017 /* SYCLLocation.m in Sources */,
 				DF8453F61CF8B18100D8C29D /* AppDelegate.m in Sources */,
 				DF8453F31CF8B18100D8C29D /* main.m in Sources */,
-				A77B48251DE6BE0000434F00 /* SYCLLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
