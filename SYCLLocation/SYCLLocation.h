@@ -16,7 +16,7 @@
 + (SYCLLocation *)shareLocation;
 
 /// 判断定位操作是否被允许
-+ (BOOL)isEnabledLocation;
+- (BOOL)isEnabledLocation;
 
 /// 定位开始后手动停止
 - (void)locationStop;
@@ -27,8 +27,8 @@
 @end
 
 /*
- 
- 注意：一旦用户选择了“Don’t Allow”，意味着你的应用以后就无法使用定位功能，且当用户第一次选择了之后，以后就再也不会提醒进行设置。
+ 注意：
+ 一旦用户选择了“Don’t Allow”，意味着你的应用以后就无法使用定位功能，且当用户第一次选择了之后，以后就再也不会提醒进行设置。
  因此在程序中应该进行判断，如果发现自己的定位服务没有打开，那么应该提醒用户打开定位服务功能。
  CLLocationManager有个类方法可以判断当前应用的定位功能是否可用+ (BOOL)locationServicesEnabled;
  
@@ -46,6 +46,14 @@
  （1）NSLocationAlwaysUsageDescription app在前台、后台、挂起、结束进程状态时，都可以获取到定位信息
  （2）NSLocationWhenInUseUsageDescription 当app在前台的时候，才可以获取到定位信息
  
- 3、设置NSLocationUsageDescription说明定位的目的(Privacy - Location Usage Description)
+ 3、plist文件中设置隐私（右击Info.plist-Open As-Source Code）
+ 设置NSLocationUsageDescription说明定位的目的(Privacy - Location Usage Description)
+ （1）<key>NSLocationAlwaysUsageDescription</key>
+ <true/>
+ （2）<key>NSLocationUsageDescription</key>
+ <string>想知道你在哪里？</string>
+ （3）<key>NSLocationWhenInUseUsageDescription</key>
+ <true/>
+ 
  
  */

@@ -10,8 +10,8 @@
 
 @interface SYCLLocation () <CLLocationManagerDelegate>
 
-@property (nonatomic, copy) void (^ successBlock)(CLLocation *location, CLPlacemark *placemark);
-@property (nonatomic, copy) void (^ errorBlock)(NSError *error);
+@property (nonatomic, copy) void (^successBlock)(CLLocation *location, CLPlacemark *placemark);
+@property (nonatomic, copy) void (^errorBlock)(NSError *error);
 
 @end
 
@@ -22,8 +22,7 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self)
-    {
+    if (self) {
         // 设置当前类为其代理
         self.delegate = self;
         // 设置位置精确度 最佳精确度
@@ -32,13 +31,11 @@
         self.distanceFilter = 10.0;
        
         // 始终允许访问位置信息
-        if ([self respondsToSelector:@selector(requestAlwaysAuthorization)])
-        {
+        if ([self respondsToSelector:@selector(requestAlwaysAuthorization)]) {
             [self requestAlwaysAuthorization];
         }
         // 使用应用程序期间允许访问位置数据
-        if ([self respondsToSelector:@selector(requestWhenInUseAuthorization)])
-        {
+        if ([self respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             [self requestWhenInUseAuthorization];
         }
     }
@@ -59,23 +56,19 @@
 
 #pragma mark - methord
 
-
 /// 判断定位操作是否被允许
-+ (BOOL)isEnabledLocation
+- (BOOL)isEnabledLocation
 {
-    if ([CLLocationManager locationServicesEnabled])
-    {
+    if ([CLLocationManager locationServicesEnabled]) {
         return YES;
     }
-    
     return NO;
 }
 
 /// 定位开始
 - (void)locationStart
 {
-    if ([[self class] isEnabledLocation])
-    {
+    if ([self isEnabledLocation]) {
         NSLog(@"开始定位");
         [self startUpdatingLocation];
     }
@@ -112,18 +105,13 @@
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     // 根据经纬度反向地理编译出地址信息
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *array, NSError *error) {
-        if (array.count > 0)
-        {
+        if (array.count > 0) {
             CLPlacemark *placemark = [array objectAtIndex:0];
-            if (self.successBlock)
-            {
+            if (self.successBlock) {
                 self.successBlock(currentLocation, placemark);
             }
-        }
-        else
-        {
-            if (self.errorBlock)
-            {
+        } else {
+            if (self.errorBlock) {
                 self.errorBlock(error);
             }
         }
@@ -135,8 +123,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    if (self.errorBlock)
-    {
+    if (self.errorBlock) {
         self.errorBlock(error);
     }
     
