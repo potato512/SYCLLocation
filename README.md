@@ -1,20 +1,28 @@
 # SYCLLocation
 使用系统地图进行定位及反编码（二次封装类，便于开发）
 
-# 效果图
+
+效果图
 
 ![locationImage01.gif](./locationImage01.gif)
 
 ![locationImage02.gif](./locationImage02.gif)
 
-# 使用示例
-~~~ javascript
-// 导入封装类头文件
-#import "SYCLLocation.h"
-~~~
 
-~~~ javascript
-// 封装方法 开启定位
+使用示例
+
+导入封装类头文件
+```
+#import "SYCLLocation.h"
+```
+
+判断定位是否可用
+```
+BOOL isValid = [[SYCLLocation shareLocation] isEnabledLocation];
+```
+
+开启定位
+```
 [[SYCLLocation shareLocation] locationStart:^(CLLocation *location, CLPlacemark *placemark) {
 
     NSString *name = placemark.name;
@@ -72,12 +80,13 @@
         NSLog(@"No results were returned.");
     }
 }];
-~~~ 
+```
 
-~~~ javascript
-// 封装方法 结束定位
+
+结束定位
+```
 [[SYCLLocation shareLocation] locationStop];
-~~~ 
+```
 
 # 注意事项
 * 1、添加CoreLocation.framework
@@ -94,7 +103,12 @@
 ![locationImage00.png](./locationImage00.png)
 
 
-## 修改说明
+
+修改说明
+* 20180807
+  * 版本号：1.1.0
+  * 修改完善
+
 * 20171017
   * 版本号：1.0.1
   * 说明文档完善
